@@ -11,6 +11,26 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/home', function () {
+
+
+    $compliments = App\Compliment::all();
+
+    return view('home/index', compact('compliments'));
+});
+
+Route::get('/users', function () {
+    return view('users/index');
+});
+
+Route::get('/users/{user}', function () {
+    return view('users/user');
+});
+
+Route::get('/compliments/received', function () {
+    return view('compliments/received');
+});
+
+Route::get('/compliments/given', function () {
+    return view('compliments/given');
 });

@@ -15,7 +15,8 @@ class CreateComplimentsTable extends Migration
     {
         Schema::create('compliments', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
+            $table->integer('zender_id');
+            $table->integer('ontvanger_id');
             $table->text('body');
             $table->timestamps();
         });

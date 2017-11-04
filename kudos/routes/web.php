@@ -11,25 +11,13 @@
 |
 */
 
-Route::get('/home', function () {
+Route::get('/', 'ComplimentController@receivedCompliments');
 
+Route::get('/users/index', 'UserController@index');
 
-    $compliments = App\Compliment::all();
+Route::get('/users/index/{user}', 'UserController@getUser');
 
-    return view('home/index', compact('compliments'));
-});
-
-Route::get('/users', function () {
-    return view('users/index');
-});
-
-Route::get('/users/{user}', function () {
-    return view('users/user');
-});
-
-Route::get('/compliments/received', function () {
-    return view('compliments/received');
-});
+Route::get('/compliments/received', 'ComplimentController@receivedCompliments');
 
 Route::get('/compliments/given', function () {
     return view('compliments/given');

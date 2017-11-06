@@ -31,7 +31,7 @@
 <body>
 
     @include('partials/header')
-
+    Kudos
     @yield('content')
 
     @include('partials/footer')

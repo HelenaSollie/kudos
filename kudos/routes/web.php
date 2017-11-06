@@ -16,10 +16,12 @@ Route::get('login/callback', 'Auth\LoginController@handleProviderCallback');
 
 Route::get('/', 'Controller@index');
 
-Route::get('/users/index', 'UserController@index');
+Route::get('/home', 'UserController@profile');
 
-Route::get('/users/index/{user}', 'UserController@getUser');
-Route::post('/users/index/{user}','ComplimentController@create');
+Route::get('/users', 'UserController@index');
+
+Route::get('/users/{user}', 'UserController@getUser');
+Route::post('/users/{user}','ComplimentController@create');
 
 Route::get('/compliments/received', 'ComplimentController@receivedCompliments');
 Route::get('/compliments/given', 'ComplimentController@givenCompliments');

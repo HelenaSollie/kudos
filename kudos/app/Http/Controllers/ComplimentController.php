@@ -25,7 +25,7 @@ class ComplimentController extends Controller
     }
     public function create()
     {
-        $loggedUser = 7;
+        $loggedUser = 35;
 
         $compliment = new Compliment();
         $compliment->zender_id = $loggedUser;

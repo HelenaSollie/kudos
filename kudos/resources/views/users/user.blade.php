@@ -65,7 +65,7 @@
 
             background-color: #7184ff;
             color: white;
-            width: 20%;
+            width: 30%;
             height: 50px;
             margin-top: 50px;
             align-self: center;
@@ -92,7 +92,7 @@
 
 
 
-        <form action="/users/index/{{$clickeduser->id}}" method="post">
+        <form action="/users/{{$clickeduser->id}}" method="post">
 
             {{ csrf_field() }}
 
@@ -102,11 +102,22 @@
 
             <input type="text" name="compliment" placeholder="Hey good-looking ... ">
 
-            <button type="submit">Send</button>
+            <button type="submit" >Give compliment</button>
 
         </form>
 
     </div>
+
+
+    @foreach($compliment as $com)
+
+        <div class="compliment">
+
+            <p>{{$com->body}}</p>
+
+        </div>
+
+    @endforeach
 
 @endsection
 

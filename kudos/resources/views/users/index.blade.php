@@ -56,7 +56,7 @@
 
             <h1 >{{$u->name}}</h1>
 
-            <a href="/users/index/{{$u->id}}">
+            <a href="/users/{{$u->id}}">
                 <img  src="{{$u->avatar}}">
             </a>
 

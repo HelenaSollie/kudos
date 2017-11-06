@@ -70,7 +70,7 @@ class LoginController extends Controller
         }
 
 
-        return redirect('/users/index');
+        return redirect('/users');
 
 
     }
@@ -80,4 +80,6 @@ class LoginController extends Controller
         Auth::logout();
         return redirect('/');
     }
+
+
 }

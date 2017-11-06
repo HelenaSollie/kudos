@@ -36,9 +36,9 @@
 <h1>K U D O S</h1>
     <nav>
         <ul>
-            <a href="/users/index">Users</a>
-            <a href="/compliments/given">Given</a>
-            <a href="/compliments/received">Received</a>
+            <a href="/users">Users</a>
+            <a href="/compliments/given">Compliments Given</a>
+            <a href="/compliments/received">Compliments Received</a>
         </ul>
     </nav>
 </div>

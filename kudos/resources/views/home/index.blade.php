@@ -1,20 +1,44 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>KUDOS</title>
-</head>
-<body>
+@extends('master')
 
-   @include('partials/header')
+    <style>
 
-    @foreach($compliments as $compliment)
-        <li>{{$compliment->body}}</li>
-    @endforeach
-   @include('partials/footer')
+        .login {
 
-</body>
-</html>
+            margin-top: 100px;
+            margin-bottom: 100px;
+            font-family: 'Lato', sans-serif;
+        }
+
+        #login a {
+
+            text-decoration: none;
+        }
+
+        #login a p {
+
+
+            color: white;
+            text-align: center;
+            padding-top: 25px;
+            margin-left: 37.5%;
+            border-radius: 20px;
+            background-color: #7184ff;
+            width: 20%;
+            height: 50px;
+        }
+
+
+    </style>
+
+@section('content')
+
+   <div class="login">
+
+       <div id="login">
+       <a href="/login/facebook"><p>Facebook Login</p></a>
+
+   </div>
+
+   </div>
+
+@endsection

@@ -1,21 +1,12 @@
 
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>KUDOS</title>
-
-
-    <style>
+<style>
 
         .users {
 
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: center;
+            flex-wrap: wrap;
             width: 70%;
             margin-left: 15%;
             margin-top: 50px;
@@ -27,6 +18,8 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            margin-top: 50px;
+            margin-left: 5%;
 
         }
 
@@ -42,16 +35,18 @@
         .user img {
 
             width: 200px;
-            height: auto;
+            height: 200px;
+            border-radius: 50%;
+            border: 20px solid #7184ff;
         }
 
 
 
     </style>
-</head>
-<body>
 
-@include('partials/header')
+@extends('master')
+
+@section('content')
 
 <div class="users">
 
@@ -70,7 +65,4 @@
 
 </div>
 
-@include('partials/footer')
-
-</body>
-</html>
+@endsection

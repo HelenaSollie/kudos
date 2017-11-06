@@ -1,17 +1,56 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>KUDOS</title>
-</head>
-<body>
+<style>
 
-@include('partials/header')
+    .compliments {
 
-@include('partials/footer')
+        width: 70%;
+        margin-left: 15%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 50px;
+    }
 
-</body>
-</html>
+    .compliments h2 {
+
+        align-self: center;
+        color: #7184ff;
+        margin-bottom: 50px;
+    }
+
+    .compliment {
+
+        width: 100%;
+        text-align: center;
+        border: 1px solid #7184ff ;
+        color: #7184ff;
+        font-size: 1.2em;
+
+        margin-bottom: 50px;
+    }
+
+</style>
+
+@extends('master')
+
+@section('content')
+
+    <div class="compliments">
+
+        <h2>All those compliment that were shared today ... </h2>
+
+
+
+        @foreach($compliments as $c)
+
+            <div class="compliment">
+
+
+                <p>{{$c->body}}</p>
+
+            </div>
+
+        @endforeach
+    </div>
+
+
+@endsection

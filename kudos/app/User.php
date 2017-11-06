@@ -13,7 +13,7 @@ class User extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'avatar'
+        'name', 'avatar', 'avatar_original'
     ];
     /**
      * The attributes that should be hidden for arrays.

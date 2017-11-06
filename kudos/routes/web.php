@@ -11,14 +11,15 @@
 |
 */
 
-Route::get('/', 'ComplimentController@receivedCompliments');
+Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
+Route::get('login/callback', 'Auth\LoginController@handleProviderCallback');
+
+Route::get('/', 'Controller@index');
 
 Route::get('/users/index', 'UserController@index');
 
 Route::get('/users/index/{user}', 'UserController@getUser');
+Route::post('/users/index/{user}','ComplimentController@create');
 
 Route::get('/compliments/received', 'ComplimentController@receivedCompliments');
-
-Route::get('/compliments/given', function () {
-    return view('compliments/given');
-});
+Route::get('/compliments/given', 'ComplimentController@givenCompliments');

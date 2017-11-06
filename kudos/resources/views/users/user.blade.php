@@ -1,11 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>KUDOS</title>
+
 
     <style>
 
@@ -34,6 +27,7 @@
             align-self: center;
             border-radius: 50%;
             margin-bottom: 50px;
+            border: 10px solid #7184ff;
         }
 
         .compli_form {
@@ -55,7 +49,7 @@
 
             font-size: 1.5em;
             text-align: center;
-            color: #8a6d3b ;
+            color: #7184ff ;
 
         }
 
@@ -69,23 +63,23 @@
 
         .compli_form form button {
 
-            background-color: #8a6d3b;
+            background-color: #7184ff;
             color: white;
             width: 20%;
             height: 50px;
             margin-top: 50px;
             align-self: center;
+            border: 1px solid #7184ff;
+            font-size: 1.2em;
 
 
         }
 
     </style>
-</head>
 
+    @extends('master')
 
-<body>
-
-@include('partials/header')
+    @section('content')
 
     <div class="user">
 
@@ -96,18 +90,23 @@
 
     <div class="compli_form">
 
-        <form action="" method="post">
+
+
+        <form action="/users/index/{{$clickeduser->id}}" method="post">
+
+            {{ csrf_field() }}
 
             <label><p>Give this person a compliment!</p></label>
-            <input value="{{$clickeduser->id}}" type="hidden">
-            <input type="text" name="text" placeholder="Hey good-looking ... ">
+
+            <input value="{{$clickeduser->id}}" type="hidden" name="receiver">
+
+            <input type="text" name="compliment" placeholder="Hey good-looking ... ">
+
             <button type="submit">Send</button>
 
         </form>
 
     </div>
 
-@include('partials/footer')
+@endsection
 
-</body>
-</html>

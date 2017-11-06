@@ -6,9 +6,8 @@
         flex-direction: row;
         justify-content: center;
 
-        background-color: #99b7e8;
+        background-color: #ff7070;
         color: white;
-        padding: 2%;
         font-size: 1.3em;
     }
 

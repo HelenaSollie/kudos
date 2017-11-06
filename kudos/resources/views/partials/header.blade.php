@@ -6,7 +6,7 @@
         flex-direction: row;
         justify-content: space-around;
 
-        background-color: #99b7e8;
+        background-color: #ff7070;
         color: white;
     }
 
@@ -24,7 +24,7 @@
     }
 
     .nav nav ul a:hover {
-        color:#ffcd4f;
+        color:#7184ff;
     }
 
 
@@ -36,9 +36,9 @@
 <h1>K U D O S</h1>
     <nav>
         <ul>
-            <a href="../users/index">Users</a>
-            <a href="../compliments/given">Given</a>
-            <a href="../compliments/received">Received</a>
+            <a href="/users/index">Users</a>
+            <a href="/compliments/given">Given</a>
+            <a href="/compliments/received">Received</a>
         </ul>
     </nav>
 </div>
